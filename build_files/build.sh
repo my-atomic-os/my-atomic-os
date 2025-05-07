@@ -46,7 +46,6 @@ systemctl enable podman.socket \
 	open-fprintd-restart-after-resume.service \
 	python3-validity-restart-after-resume.service \
 	libvirtd.service \
- 	powertop.service \
   	chronyd.service
 
 ### disable services
