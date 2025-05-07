@@ -33,7 +33,8 @@ dnf5 install -y mozilla-openh264 \
        	chromium \
 	distrobox gh \
  	"https://github.com/twpayne/chezmoi/releases/download/v2.62.2/chezmoi-2.62.2-x86_64.rpm" \
-  	cmake glibc-devel 
+  	cmake glibc-devel \
+   	powertop
        
      
 dnf5 -y swap ffmpeg-free ffmpeg --allowerasing
@@ -44,7 +45,7 @@ systemctl enable podman.socket open-fprintd.service \
 	python3-validity.service \
 	open-fprintd-restart-after-resume.service \
 	python3-validity-restart-after-resume.service \
-	libvirtd.service
+	libvirtd.service powertop.service
 
 ### disable services
 systemctl disable open-fprintd-resume.service \
