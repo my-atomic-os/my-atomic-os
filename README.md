@@ -6,7 +6,7 @@ https://torrent.fedoraproject.org/
 ### install my image
 
 ### install secret
-`git clone https://github.com/Tammam20/my-atomic-os && sudo sh ./my-atomic-os/install_secret.sh && rm -rf ./my-atomic-os`
+`wget -o - https://github.com/Tammam20/my-atomic-os/blob/main/install_secret.sh | sudo bash`
 
 ### switch to my image (signed)
 `sudo bootc switch --enforce-container-sigpolicy ghcr.io/tammam20/my-atomic-os:latest`
