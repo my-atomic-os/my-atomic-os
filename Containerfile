@@ -10,6 +10,7 @@ FROM quay.io/fedora-ostree-desktops/silverblue:42
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 COPY cosign.pub /etc/pki/containers/
+COPY system_files /
 
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \
