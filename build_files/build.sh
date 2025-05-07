@@ -24,7 +24,9 @@ dnf5 install -y mozilla-openh264 \
 	fprintd-clients-pam \
 	python3-validity \
  	code \
-   	rustup lm_sensors stress-ng \
+   	rust cargo clippy rustfmt \
+    	rust-src \
+    	lm_sensors stress-ng \
     	rpmfusion-\*-appstream-data \
      	intel-media-driver \
       	python3-pip rclone \
