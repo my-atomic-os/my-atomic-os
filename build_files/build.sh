@@ -41,7 +41,7 @@ dnf5 -y swap ffmpeg-free ffmpeg --allowerasing
 dnf5 -y group install multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
 
 ### enable services
-systemctl enable podman.socket 
+systemctl enable podman.socket \
 	open-fprintd.service \
 	python3-validity.service \
 	open-fprintd-restart-after-resume.service \
