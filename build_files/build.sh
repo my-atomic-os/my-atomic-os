@@ -1,5 +1,6 @@
 #!/bin/bash
 
 set -ouex pipefail
-flatpak install -y fedora org.gnome.Sudoku
+flatpak remote-add --if-not-exists  flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install -y flathub org.gnome.Sudoku
 
