@@ -1,4 +1,5 @@
 #!/bin/bash
 
 set -ouex pipefail
-flatpak install flathub -y org.gnome.Sudoku
+flatpak install -y fedora org.gnome.Sudoku
+
