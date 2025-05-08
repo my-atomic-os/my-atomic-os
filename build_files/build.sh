@@ -1,5 +1,4 @@
 #!/bin/bash
 
 set -ouex pipefail
-
-flatpak update -y
+flatpak install flathub -y org.gnome.Sudoku
