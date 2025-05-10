@@ -36,7 +36,7 @@ dnf5 install -y mozilla-openh264 \
   	cmake glibc-devel \
    	fastfetch kmod openssl \
     	kernel-devel mokutil \
-     	keyutils
+     	keyutils mdevctl
        
      
 dnf5 -y swap ffmpeg-free ffmpeg --allowerasing
