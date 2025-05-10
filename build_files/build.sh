@@ -17,7 +17,7 @@ dnf5 -y copr enable sneexy/python-validity
 dnf5 -y install "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm" \
 	"https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
 dnf5 -y config-manager setopt fedora-cisco-openh264.enabled=1
-dnf5 -y group install virtualization
+dnf5 -y group install --with-optional virtualization
 dnf5 install -y mozilla-openh264 \
 	open-fprintd \
 	fprintd-clients \
@@ -34,9 +34,7 @@ dnf5 install -y mozilla-openh264 \
 	distrobox gh \
  	"https://github.com/twpayne/chezmoi/releases/download/v2.62.2/chezmoi-2.62.2-x86_64.rpm" \
   	cmake glibc-devel \
-   	fastfetch kmod openssl \
-    	kernel-devel mokutil \
-     	keyutils mdevctl
+   	fastfetch mdevctl
        
      
 dnf5 -y swap ffmpeg-free ffmpeg --allowerasing
