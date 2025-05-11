@@ -24,3 +24,5 @@ log "fixing signing"
 
 log "clean build env"
 /ctx/cleanup.sh
+
+log "build is successful"
