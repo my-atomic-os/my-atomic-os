@@ -13,28 +13,8 @@ log "setting up my-atomic-os build proccess"
 log "setting up repos"
 /ctx/repo.sh
 
-dnf5 -y group install --with-optional virtualization
-dnf5 install -y mozilla-openh264 \
-	open-fprintd \
-	fprintd-clients \
-	fprintd-clients-pam \
-	python3-validity \
- 	code \
-   	rust cargo clippy rustfmt \
-    	rust-src \
-    	lm_sensors stress-ng \
-    	rpmfusion-\*-appstream-data \
-     	intel-media-driver \
-      	python3-pip rclone \
-       	chromium \
-	distrobox gh \
- 	"https://github.com/twpayne/chezmoi/releases/download/v2.62.2/chezmoi-2.62.2-x86_64.rpm" \
-  	cmake glibc-devel \
-   	fastfetch mdevctl
-       
-     
-dnf5 -y swap ffmpeg-free ffmpeg --allowerasing
-dnf5 -y group install multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+log "installig packages"
+/ctx/packages.sh
 
 ### fix signing
 restorecon -RFv /etc/pki/containers
