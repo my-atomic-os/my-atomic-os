@@ -1,6 +1,17 @@
 #!/bin/bash
 
-set -ouex pipefail
+set ${SET_X:+-x} -eou pipefail
+
+trap '[[ $BASH_COMMAND != echo* ]] && [[ $BASH_COMMAND != log* ]] && echo "+ $BASH_COMMAND"' DEBUG
+
+log() {
+  echo "=== $* ==="
+}
+
+log "setting up my-atomic-os build proccess"
+
+log "setting up repos"
+/ctx/repo.sh
 
 dnf5 -y group install --with-optional virtualization
 dnf5 install -y mozilla-openh264 \
