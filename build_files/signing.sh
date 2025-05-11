@@ -8,7 +8,14 @@ log() {
   echo "=== $* ==="
 }
 
+
 log  "fixing signing"
+mkdir -p /etc/containers
+mkdir -p /etc/pki/containers
+mkdir -p /etc/containers/registries.d/
+
+cp /ctx/cosign.pub /etc/pki/containers/cosign.pub
+
 restorecon -RFv /etc/pki/containers
 bash -c 'cat <<EOF > /etc/containers/registries.d/ghcr.tammam20.my-atomic-os.yaml
 docker:
@@ -42,3 +49,5 @@ cat <<EOF > /etc/containers/policy.json
     }
 }
 EOF
+
+
