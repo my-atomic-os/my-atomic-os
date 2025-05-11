@@ -11,18 +11,18 @@ log() {
 log "setting up my-atomic-os build proccess"
 
 log "setting up repos"
-/ctx/repo.sh
+sh /ctx/repo.sh
 
 log "installig packages"
-/ctx/packages.sh
+sh /ctx/packages.sh
 
 log "setting up services"
-/ctx/services.sh
+sh /ctx/services.sh
 
 log "fixing signing"
-/ctx/signing.sh
+sh /ctx/signing.sh
 
 log "clean build env"
-/ctx/cleanup.sh
+sh /ctx/cleanup.sh
 
 log "build is successful"
