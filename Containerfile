@@ -9,7 +9,6 @@ FROM quay.io/fedora-ostree-desktops/silverblue:42
 ## make modifications desired in your image and install packages by modifying the build.sh script
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
-COPY cosign.pub /etc/pki/containers/
 COPY system_files /
 
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
