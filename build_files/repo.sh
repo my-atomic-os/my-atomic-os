@@ -18,7 +18,7 @@ autorefresh=1
 type=rpm-md
 gpgcheck=1
 gpgkey=https://packages.microsoft.com/keys/microsoft.asc" | \
-sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+tee /etc/yum.repos.d/vscode.repo > /dev/null
 dnf5 -y copr enable sneexy/python-validity
 dnf5 -y install "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm" \
 	"https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
