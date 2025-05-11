@@ -25,7 +25,7 @@ dnf5 install -y mozilla-openh264 \
       	python3-pip rclone \
        	chromium \
 	distrobox gh \
- 	"https://github.com/twpayne/chezmoi/releases/download/v2.62.2/chezmoi-2.62.3-x86_64.rpm" \
+ 	"https://github.com/twpayne/chezmoi/releases/download/v2.62.3/chezmoi-2.62.3-x86_64.rpm" \
   	cmake glibc-devel \
    	fastfetch
        
