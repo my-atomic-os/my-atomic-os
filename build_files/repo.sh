@@ -1,6 +1,12 @@
 #!/bin/bash
 
-set -ouex pipefail
+set ${SET_X:+-x} -eou pipefail
+
+trap '[[ $BASH_COMMAND != echo* ]] && [[ $BASH_COMMAND != log* ]] && echo "+ $BASH_COMMAND"' DEBUG
+
+log() {
+  echo "=== $* ==="
+}
 
 ### setup repos
 rpm  --import https://packages.microsoft.com/keys/microsoft.asc
