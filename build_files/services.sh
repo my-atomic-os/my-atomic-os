@@ -1,6 +1,12 @@
-#!/bin/bash
+#!/usr/bin/bash
 
-set -ouex pipefail
+set ${SET_X:+-x} -eou pipefail
+
+trap '[[ $BASH_COMMAND != echo* ]] && [[ $BASH_COMMAND != log* ]] && echo "+ $BASH_COMMAND"' DEBUG
+
+log() {
+  echo "=== $* ==="
+}
 
 log "enable services"
 systemctl enable podman.socket \
@@ -11,6 +17,6 @@ systemctl enable podman.socket \
 	libvirtd.service \
   	chronyd.service
 
-log  "disable services"
+log "disable services"
 systemctl disable open-fprintd-resume.service \
 	open-fprintd-suspend.service
