@@ -8,7 +8,7 @@ log() {
   echo "=== $* ==="
 }
 
-### setup repos
+log "setup repos"
 rpm  --import https://packages.microsoft.com/keys/microsoft.asc
 echo -e "[code]
 name=Visual Studio Code
