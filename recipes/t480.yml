@@ -9,6 +9,7 @@ modules:
         - open-fprintd
         - fprintd-clients
         - fprintd-clients-pam
+        - python3-validity
   - type: systemd
     # this example disables automatic flatpak updates and enables a custom service unit for all users
     system:
