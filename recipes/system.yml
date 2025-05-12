@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
 modules:
   - type: dnf
     repos:
@@ -10,6 +11,10 @@ modules:
       with-optional: true # install optional packages from group
       packages:
         - virtualization
+    remove:
+      packages:
+        - ffmpeg-free
+      auto-remove: true
     install:
       packages:
         - mozilla-openh264
@@ -31,9 +36,6 @@ modules:
         - cmake
         - glibc-devel
         - fastfetch
-    replace:
-        allow-erasing: true
-        packages:
-          - old: ffmpeg-free
-            new: ffmpeg
-
+        - ffmpeg
+      allow-erasing: true
+    

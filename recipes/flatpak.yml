@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
 modules: # configured multiple times to highlight how options are overridden
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
