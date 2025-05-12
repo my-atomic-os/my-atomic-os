@@ -11,10 +11,6 @@ modules:
       with-optional: true # install optional packages from group
       packages:
         - virtualization
-    remove:
-      packages:
-        - ffmpeg-free
-      auto-remove: true
     install:
       packages:
         - mozilla-openh264
@@ -36,6 +32,8 @@ modules:
         - cmake
         - glibc-devel
         - fastfetch
-        - ffmpeg
-      allow-erasing: true
-    
+    replace:
+      - from-repo: rpmfusion
+        packages:
+          - old: ffmpeg-free
+            new: ffmpeg
