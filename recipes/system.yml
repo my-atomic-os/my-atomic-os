@@ -2,16 +2,20 @@
 modules:
   - type: dnf
     repos:
-      keys:
-        - https://packages.microsoft.com/keys/microsoft.asc
+      cleanup: true
       files:
         - vscode.repo
+      keys:
+        - https://packages.microsoft.com/keys/microsoft.asc
       nonfree: rpmfusion
+
     group-install:
       with-optional: true # install optional packages from group
       packages:
         - virtualization
+        
     install:
+      skip-unavailable: true # skip unavailable packages
       packages:
         - mozilla-openh264
         - python3-validity
