@@ -32,8 +32,3 @@ modules:
         - cmake
         - glibc-devel
         - fastfetch
-    replace:
-      - from-repo: rpmfusion
-        packages:
-          - old: ffmpeg-free
-            new: ffmpeg
