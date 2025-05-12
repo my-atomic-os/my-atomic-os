@@ -1,0 +1,39 @@
+modules:
+  - type: dnf
+    repos:
+      keys:
+        - https://packages.microsoft.com/keys/microsoft.asc
+      files:
+        - vscode.repo
+      nonfree: rpmfusion
+    group-install:
+      with-optional: true # install optional packages from group
+      packages:
+        - virtualization
+    install:
+      packages:
+        - mozilla-openh264
+        - python3-validity
+        - code
+        - rust
+        - cargo
+        - clippy
+        - rustfmt
+        - rust-src
+        - lm_sensors
+        - stress-ng
+        - intel-media-driver
+        - python3-pip
+        - rclone
+        - chromium
+        - distrobox
+        - gh
+        - cmake
+        - glibc-devel
+        - fastfetch
+    replace:
+        allow-erasing: true
+        packages:
+          - old: ffmpeg-free
+            new: ffmpeg
+

@@ -17,11 +17,11 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
-  - type: script
-    scripts:
-      - repo.sh
-      - packages.sh
-      - services.sh
+  
+  - from-file: system.yml
+  - from-file: t480.yml
+  - from-file: chezmoi.yml
+  - from-file: gnome-extensions.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
