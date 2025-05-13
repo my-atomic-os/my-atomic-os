@@ -19,7 +19,6 @@ modules:
 
   
   - from-file: system.yml
-  - from-file: t480.yml
   - from-file: chezmoi.yml
   - from-file: gnome-extensions.yml
 
