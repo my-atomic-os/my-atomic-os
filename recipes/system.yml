@@ -34,6 +34,11 @@ modules:
         - tlp
         - tlp-rdw
 
+    remove:
+      packages:
+        - tuned 
+        - tuned-ppd
+
     group-install:
       with-optional: true # install optional packages from group
       packages:
