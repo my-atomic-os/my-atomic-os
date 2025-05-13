@@ -31,6 +31,8 @@ modules:
         - cmake
         - glibc-devel
         - fastfetch
+        - tlp
+        - tlp-rdw
 
     group-install:
       with-optional: true # install optional packages from group
