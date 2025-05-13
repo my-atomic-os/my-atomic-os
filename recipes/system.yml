@@ -1,8 +1,59 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
 modules:
+  - type: dnf
+    repos:
+      files:
+        - vscode.repo
+      copr:
+        - sneexy/python-validity
+      keys:
+        - https://packages.microsoft.com/keys/microsoft.asc
+      nonfree: rpmfusion
+
+    install:
+      packages:
+        - mozilla-openh264
+        - python3-validity
+        - code
+        - rust
+        - cargo
+        - clippy
+        - rustfmt
+        - rust-src
+        - lm_sensors
+        - stress-ng
+        - intel-media-driver
+        - python3-pip
+        - rclone
+        - chromium
+        - distrobox
+        - gh
+        - cmake
+        - glibc-devel
+        - fastfetch
+
+    group-install:
+      with-optional: true # install optional packages from group
+      packages:
+        - virtualization
+
   - type: script
     scripts:
-      - repo.sh
-      - packages.sh
-      - services.sh
-   
+      - codecs.sh
+
+  - type: systemd
+    system:
+      enabled:
+        - podman.socket 
+        - open-fprintd.service 
+        - python3-validity.service 
+        - open-fprintd-restart-after-resume.service 
+        - python3-validity-restart-after-resume.service 
+        - libvirtd.service
+
+      disabled:
+        - open-fprintd-resume.service
+        - open-fprintd-suspend.service
+      
+
+
