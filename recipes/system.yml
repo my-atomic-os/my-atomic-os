@@ -33,11 +33,20 @@ modules:
         - fastfetch
         - tlp
         - tlp-rdw
+        - gnome-backgrounds-extras
 
     remove:
       packages:
         - tuned 
         - tuned-ppd
+        - fedora-workstation-backgrounds
+        - desktop-backgrounds-gnome
+        - f42-backgrounds-gnome
+        - gnome-classic-session
+        - gnome-shell-extension-apps-menu
+        - gnome-shell-extension-launch-new-instance
+        - gnome-shell-extension-places-menu
+        - gnome-shell-extension-window-list
 
     group-install:
       with-optional: true # install optional packages from group
