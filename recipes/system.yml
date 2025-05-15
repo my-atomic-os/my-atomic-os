@@ -32,7 +32,7 @@ modules:
   - type: systemd
     system:
       enabled:
-        - podman.socket 
+      #  - podman.socket 
         - open-fprintd.service 
         - python3-validity.service 
         - open-fprintd-restart-after-resume.service 
