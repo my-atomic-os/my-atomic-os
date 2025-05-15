@@ -5,6 +5,7 @@ modules:
     install:
       packages:
         - steam-devices
+        - hello
 
       
 
