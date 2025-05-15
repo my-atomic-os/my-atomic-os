@@ -35,7 +35,9 @@ modules:
         - tlp-rdw
         - gnome-backgrounds-extras
         - steam-devices
-        - hello
+        - dkms
+        - cabextract
+        - kernel-headers
 
     remove:
       packages:
@@ -49,8 +51,6 @@ modules:
         - gnome-shell-extension-launch-new-instance
         - gnome-shell-extension-places-menu
         - gnome-shell-extension-window-list
-        - adw-gtk3
-        - htop
 
     group-install:
       with-optional: true # install optional packages from group
@@ -71,11 +71,6 @@ modules:
       disabled:
         - open-fprintd-resume.service
         - open-fprintd-suspend.service
-
-  - type: akmods
-    base: bazzite
-    install:
-      - xone
 
 
 
