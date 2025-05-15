@@ -15,7 +15,6 @@ modules:
         - mozilla-openh264
         - python3-validity
         - code
-        - fastfetch
         - tlp
         - tlp-rdw
 
