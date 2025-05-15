@@ -35,9 +35,6 @@ modules:
         - tlp-rdw
         - gnome-backgrounds-extras
         - steam-devices
-        - dkms
-        - cabextract
-        - kernel-headers
 
     remove:
       packages:
