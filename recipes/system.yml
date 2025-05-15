@@ -77,6 +77,7 @@ modules:
         - open-fprintd-suspend.service
 
   - type: akmods
+    base: bazzite
     install:
       - xone
 
