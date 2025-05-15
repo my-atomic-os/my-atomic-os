@@ -24,10 +24,10 @@ modules:
         - tuned 
         - tuned-ppd
 
-    group-install:
-      with-optional: true # install optional packages from group
-      packages:
-        - virtualization
+   # group-install:
+   #   with-optional: true # install optional packages from group
+   #   packages:
+    #    - virtualization
         
   - type: systemd
     system:
