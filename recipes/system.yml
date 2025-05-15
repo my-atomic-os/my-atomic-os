@@ -56,11 +56,7 @@ modules:
       with-optional: true # install optional packages from group
       packages:
         - virtualization
-
-  - type: script
-    scripts:
-      - codecs.sh
-
+        
   - type: systemd
     system:
       enabled:
