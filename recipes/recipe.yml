@@ -16,6 +16,11 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+
+  - type: akmods
+    base: bazzite
+    install:
+      - xone
   
   - from-file: system.yml
   - from-file: chezmoi.yml
