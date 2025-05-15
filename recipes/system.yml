@@ -1,0 +1,88 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+modules:
+  - type: dnf
+    repos:
+      files:
+        - vscode.repo
+      copr:
+        - sneexy/python-validity
+      keys:
+        - https://packages.microsoft.com/keys/microsoft.asc
+      nonfree: rpmfusion
+
+    install:
+      packages:
+        - mozilla-openh264
+        - python3-validity
+        - code
+        - rust
+        - cargo
+        - clippy
+        - rustfmt
+        - rust-src
+        - lm_sensors
+        - stress-ng
+        - intel-media-driver
+        - python3-pip
+        - rclone
+        - chromium
+        - distrobox
+        - gh
+        - cmake
+        - glibc-devel
+        - fastfetch
+        - tlp
+        - tlp-rdw
+        - gnome-backgrounds-extras
+        - steam-devices
+        - hello
+
+    remove:
+      packages:
+        - tuned 
+        - tuned-ppd
+        - fedora-workstation-backgrounds
+        - desktop-backgrounds-gnome
+        - f42-backgrounds-gnome
+        - gnome-classic-session
+        - gnome-shell-extension-apps-menu
+        - gnome-shell-extension-launch-new-instance
+        - gnome-shell-extension-places-menu
+        - gnome-shell-extension-window-list
+        - adw-gtk3
+        - htop
+
+    group-install:
+      with-optional: true # install optional packages from group
+      packages:
+        - virtualization
+
+  - type: script
+    scripts:
+      - codecs.sh
+
+  - type: systemd
+    system:
+      enabled:
+        - podman.socket 
+        - open-fprintd.service 
+        - python3-validity.service 
+        - open-fprintd-restart-after-resume.service 
+        - python3-validity-restart-after-resume.service 
+        - libvirtd.service
+        - tlp.service
+
+      disabled:
+        - open-fprintd-resume.service
+        - open-fprintd-suspend.service
+
+  - type: akmods
+    base: main
+    install:
+      - xone
+
+
+
+      
+
+
