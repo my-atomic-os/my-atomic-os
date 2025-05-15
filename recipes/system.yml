@@ -6,7 +6,6 @@ modules:
         - vscode.repo
       copr:
         - sneexy/python-validity
-        - sentry/xone
       keys:
         - https://packages.microsoft.com/keys/microsoft.asc
       nonfree: rpmfusion
@@ -36,8 +35,7 @@ modules:
         - tlp-rdw
         - gnome-backgrounds-extras
         - steam-devices
-        - xone
-        - lpf-xone-firmware
+        - hello
 
     remove:
       packages:
@@ -78,7 +76,9 @@ modules:
         - open-fprintd-resume.service
         - open-fprintd-suspend.service
 
-  
+  - type: akmods
+    install:
+      - xone
 
 
 
