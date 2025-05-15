@@ -1,7 +1,0 @@
-# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
-modules:
-  - type: gnome-extensions
-    install: 
-    - 615 # AppIndicator and KStatusNotifierItem Support
-    - 517 # Caffeine
-    - 779 # Clipboard Indicator
