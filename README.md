@@ -3,6 +3,13 @@
 ### download silverblue os first from torrent flash it on a usb drive or use ventoy and install it
 https://torrent.fedoraproject.org/
 
+### fix systemd-remount-fs.service
+## add # to / entry in fstab
+`sudo nano /etc/fstab` 
+
+## restore zstd compression
+`sudo rpm-ostree kargs --delete=rootflags=subvol=root --append=rootflags=subvol=root,compress=zstd:1`
+
 ### install my image
 
 ### install secret
