@@ -25,9 +25,12 @@ https://torrent.fedoraproject.org/
 
 ### fix validity
 `sudo validity-sensors-firmware`
+
 `sudo systemctl restart python3-validity`
+
 ## verify the service has started correctly
 `systemctl status python3-validity`
+
 ## restart open-fprintd
 `systemctl restart open-fprintd`
 
