@@ -1,6 +1,6 @@
 ### my thinkpad-t480 os config
 
-### download silverblue os first from torrent flash it or use ventoy and install it
+### download silverblue os first from torrent flash it on a usb drive or use ventoy and install it
 https://torrent.fedoraproject.org/
 
 ### install my image
