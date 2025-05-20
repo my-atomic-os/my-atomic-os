@@ -1,5 +1,15 @@
 #!/bin/bash
 ### fix signing
+
+set ${SET_X:+-x} -eou pipefail
+
+### Signing
+mkdir -p /etc/containers
+mkdir -p /etc/pki/containers
+mkdir -p /etc/containers/registries.d/
+
+cp ./cosign.pub /etc/pki/containers/cosign.pub
+
 restorecon -RFv /etc/pki/containers
 bash -c 'cat <<EOF > /etc/containers/registries.d/ghcr.tammam20.my-atomic-os.yaml
 docker:
