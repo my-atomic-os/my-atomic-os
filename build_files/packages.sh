@@ -10,7 +10,6 @@ log() {
 
 log "installing packages"
 
-dnf5 -y group install gnome-desktop
 dnf5 -y group install --with-optional virtualization 
 dnf5 install -y mozilla-openh264 \
 	open-fprintd \
