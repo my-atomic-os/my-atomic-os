@@ -32,5 +32,5 @@ https://torrent.fedoraproject.org/
 `systemctl status python3-validity`
 
 ## restart open-fprintd
-`systemctl restart open-fprintd`
+`sudo systemctl restart open-fprintd`
 
