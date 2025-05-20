@@ -1,3 +1,4 @@
+[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/my-atomic-os)](https://artifacthub.io/packages/search?repo=my-atomic-os)
 ### my thinkpad-t480 os config
 
 ### download silverblue os first from torrent flash it on a usb drive or use ventoy and install it
