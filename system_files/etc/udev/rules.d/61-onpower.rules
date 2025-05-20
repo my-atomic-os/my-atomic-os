@@ -1,0 +1,2 @@
+# Rule for when switching to powersupply
+SUBSYSTEM=="power_supply",ENV{POWER_SUPPLY_ONLINE}=="1",RUN+="/bin/tuned-adm profile balanced"
