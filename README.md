@@ -16,7 +16,7 @@ https://torrent.fedoraproject.org/
 `git clone https://github.com/Tammam20/my-atomic-os && sudo sh ./my-atomic-os/install_secret.sh && rm -rf ./my-atomic-os`
 
 ### switch to my image (signed)
-`sudo bootc switch --enforce-container-sigpolicy ghcr.io/tammam20/my-atomic-os:latest`
+`sudo rpm-ostree switch ostree-image-signed:docker://ghcr.io/tammam20/my-atomic-os:latest`
 
 ### reboot to image
 
