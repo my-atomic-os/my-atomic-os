@@ -19,6 +19,10 @@ https://torrent.fedoraproject.org/
 ### switch to my image (signed)
 `sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/tammam20/my-atomic-os:latest`
 
+### reboot to image
+
+`systemctl reboot`
+
 ### fix validity
 `sudo validity-sensors-firmware`
 `sudo systemctl restart python3-validity`
@@ -27,6 +31,3 @@ https://torrent.fedoraproject.org/
 ## restart open-fprintd
 `systemctl restart open-fprintd`
 
-### reboot to image
-
-`systemctl reboot`
