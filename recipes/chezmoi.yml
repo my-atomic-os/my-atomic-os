@@ -1,6 +1,0 @@
-# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
-modules:
-  - type: chezmoi
-    repository: "https://github.com/Tammam20/dotfiles" # my dotfiles repo
-    all-users: true # enable chezmoi automatically
-    file-conflict-policy: replace # override changed files with those from the repo
