@@ -1,7 +1,0 @@
-[code]
-name=Visual Studio Code
-enabled=1
-baseurl=https://packages.microsoft.com/yumrepos/vscode
-type=rpm-md
-gpgcheck=1
-gpgkey=https://packages.microsoft.com/keys/microsoft.asc
