@@ -1,16 +1,21 @@
 [![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/my-atomic-os)](https://artifacthub.io/packages/container/my-atomic-os/my-atomic-os)
 ![Container image build Status](https://img.shields.io/github/actions/workflow/status/tammam20/my-atomic-os/build.yml)
 
-### my thinkpad-t480 os config
+# my thinkpad-t480 os config
+# features
+### 1- python3-validity installed from [copr repo](https://copr.fedorainfracloud.org/coprs/sneexy/python-validity/) by default
+### 2- udev rules for switching from powersave to balanced based on power source
 
-### download silverblue os first from torrent flash it on a usb drive or use ventoy and install it
-https://torrent.fedoraproject.org/
+# install steps
+### 1- download silverblue os first from [torrent](https://torrent.fedoraproject.org/) flash it on a usb drive or use ventoy  
+### 2- install it
+## after install steps (recommended)
 
 ### fix systemd-remount-fs.service
-## add # to / entry in fstab
+### add # to / entry in fstab
 `sudo nano /etc/fstab` 
 
-## restore zstd compression
+### restore zstd compression
 `sudo rpm-ostree kargs --delete=rootflags=subvol=root --append=rootflags=subvol=root,compress=zstd:1`
 
 ### install my image
@@ -30,7 +35,7 @@ https://torrent.fedoraproject.org/
 
 `sudo systemctl restart python3-validity`
 
-## verify the service has started correctly
+### verify the service has started correctly
 `systemctl status python3-validity`
 
 ## restart open-fprintd
