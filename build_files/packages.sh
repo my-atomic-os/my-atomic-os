@@ -33,15 +33,19 @@ dnf5 install -y mozilla-openh264 \
   				gnome-tweaks
 
 dnf5 remove -y  fedora-workstation-backgrounds \
-	       	    desktop-backgrounds-gnome \
+	       	desktop-backgrounds-gnome \
                 f42-backgrounds-gnome \
                 gnome-classic-session \
                 gnome-shell-extension-apps-menu \
                 gnome-shell-extension-launch-new-instance \
                 gnome-shell-extension-places-menu \
                 gnome-shell-extension-window-list \
-	       	    gnome-shell-extension-background-logo \
-	            gnome-extensions-app
+	       	gnome-shell-extension-background-logo \
+	        gnome-extensions-app \
+	     	fedora-bookmarks \
+       		fedora-chromium-config \
+	 	fedora-chromium-config-gnome \
+   		gnome-software-rpm-ostree
        
 dnf5 -y swap ffmpeg-free ffmpeg --allowerasing
 dnf5 -y group install multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
