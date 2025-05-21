@@ -1,5 +1,6 @@
 [![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/my-atomic-os)](https://artifacthub.io/packages/container/my-atomic-os/my-atomic-os)
 ![Container image build Status](https://img.shields.io/github/actions/workflow/status/tammam20/my-atomic-os/build.yml)
+![Shellcheck](https://img.shields.io/github/actions/workflow/status/tammam20/my-atomic-os/shellcheck.yml)
 
 # my thinkpad-t480 os config
 # features
@@ -17,8 +18,6 @@
 
 ### restore zstd compression
 `sudo rpm-ostree kargs --delete=rootflags=subvol=root --append=rootflags=subvol=root,compress=zstd:1`
-
-### install my image
 
 ### install secret
 `git clone https://github.com/Tammam20/my-atomic-os && sudo sh ./my-atomic-os/install_secret.sh && rm -rf ./my-atomic-os`
