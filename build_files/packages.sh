@@ -29,7 +29,8 @@ dnf5 install -y mozilla-openh264 \
   	cmake glibc-devel \
    	fastfetch \
 	gnome-backgrounds-extras \
- 	gnome-themes-extra
+ 	gnome-themes-extra \
+  	gnome-tweaks
 
 dnf5 remove -y fedora-workstation-backgrounds \
 		desktop-backgrounds-gnome \
