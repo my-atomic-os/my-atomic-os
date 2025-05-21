@@ -45,7 +45,3 @@ dnf5 remove -y  fedora-workstation-backgrounds \
        
 dnf5 -y swap ffmpeg-free ffmpeg --allowerasing
 dnf5 -y group install multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
-adduser --system dhcpcd --user-group
-adduser --system gluster --user-group
-groupadd --system libvirt
-groupadd --system qat
