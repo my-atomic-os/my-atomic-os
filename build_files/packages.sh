@@ -18,16 +18,26 @@ dnf5 install -y mozilla-openh264 \
 	python3-validity \
  	code \
    	rust cargo clippy rustfmt \
-    	rust-src \
-    	lm_sensors stress-ng \
-    	rpmfusion-\*-appstream-data \
-     	intel-media-driver \
-      	python3-pip rclone \
-       	chromium \
+    rust-src \
+    lm_sensors stress-ng \
+    rpmfusion-\*-appstream-data \
+    intel-media-driver \
+    python3-pip rclone \
+    chromium \
 	distrobox gh \
  	chezmoi \
   	cmake glibc-devel \
-   	fastfetch
+   	fastfetch \
+	gnome-backgrounds-extras
+
+dnf5 remove -y fedora-workstation-backgrounds \
+		desktop-backgrounds-gnome \
+        f42-backgrounds-gnome \
+        gnome-classic-session \
+        gnome-shell-extension-apps-menu \
+        gnome-shell-extension-launch-new-instance \
+        gnome-shell-extension-places-menu \
+        gnome-shell-extension-window-list
        
      
 dnf5 -y swap ffmpeg-free ffmpeg --allowerasing
