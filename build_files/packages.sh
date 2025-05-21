@@ -41,7 +41,6 @@ dnf5 remove -y  fedora-workstation-backgrounds \
                 gnome-shell-extension-places-menu \
                 gnome-shell-extension-window-list \
 	       	gnome-shell-extension-background-logo \
-	        gnome-extensions-app \
 	     	fedora-bookmarks \
        		fedora-chromium-config \
 	 	fedora-chromium-config-gnome \
