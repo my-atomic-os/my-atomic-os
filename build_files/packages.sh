@@ -10,27 +10,31 @@ log() {
 
 log "installing packages"
 
+
+dnf5 -y group install development-tools
 dnf5 -y group install --with-optional virtualization 
 dnf5 install -y mozilla-openh264 \
-				open-fprintd \
-				fprintd-clients \
-				fprintd-clients-pam \
-				python3-validity \
- 				code \
-   				rust cargo clippy rustfmt \
+			open-fprintd \
+			fprintd-clients \
+			fprintd-clients-pam \
+			python3-validity \
+ 			code \
+   			rust cargo clippy rustfmt \
     			rust-src \
     			lm_sensors stress-ng \
     			rpmfusion-\*-appstream-data \
     			intel-media-driver \
     			python3-pip rclone \
     			chromium \
-				distrobox gh \
- 				chezmoi \
-  				cmake glibc-devel \
-   				fastfetch \
-				gnome-backgrounds-extras \
- 				gnome-themes-extra \
-  				gnome-tweaks
+			distrobox gh \
+ 			chezmoi \
+  			cmake glibc-devel \
+   			fastfetch \
+			gnome-backgrounds-extras \
+ 			gnome-themes-extra \
+  			gnome-tweaks \
+      			automake autoconf \
+	 		cups-devel
 
 dnf5 remove -y  fedora-workstation-backgrounds \
 	       	desktop-backgrounds-gnome \
