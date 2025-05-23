@@ -13,19 +13,19 @@
 
 ### 2- install it
 
-### 3- run the following to switch to my-atomic-os
+### 3- run the following to switch to my-atomic-os:
 
-### 4- install secret
+### 3a- install secret
 ```
 git clone https://github.com/Tammam20/my-atomic-os && sudo sh ./my-atomic-os/install_secret.sh && rm -rf ./my-atomic-os
 ```
 
-### 5- switch to my image (signed)
+### 3b- switch to my image (signed)
 ```
 sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/tammam20/my-atomic-os:latest
 ```
 
-### 6- reboot to image
+### 3c- reboot to image
 ```
 systemctl reboot
 ```
