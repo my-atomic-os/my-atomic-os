@@ -4,39 +4,43 @@
 
 # my thinkpad-t480 os config
 # features
+
 ### 1- python3-validity installed from [copr repo](https://copr.fedorainfracloud.org/coprs/sneexy/python-validity/) by default
-### 2- udev rules for switching from powersave to balanced based on power source
 
 # install steps
+
 ### 1- download silverblue os first from [torrent](https://torrent.fedoraproject.org/) flash it on a usb drive or use ventoy  
+
 ### 2- install it
-## after install steps (recommended)
 
-### fix systemd-remount-fs.service
-### add # to / entry in fstab
-`sudo nano /etc/fstab` 
+### 3- run the following to switch to my-atomic-os
 
-### restore zstd compression
-`sudo rpm-ostree kargs --delete=rootflags=subvol=root --append=rootflags=subvol=root,compress=zstd:1`
-
-### install secret
+### 4- install secret
 `git clone https://github.com/Tammam20/my-atomic-os && sudo sh ./my-atomic-os/install_secret.sh && rm -rf ./my-atomic-os`
 
-### switch to my image (signed)
+### 5- switch to my image (signed)
 `sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/tammam20/my-atomic-os:latest`
 
-### reboot to image
-
+### 6- reboot to image
 `systemctl reboot`
 
-### fix validity
-`sudo validity-sensors-firmware`
+## after install steps (recommended)
+### 1- fix systemd-remount-fs.service
 
+### 2- add # to / entry in fstab (the first uncommented entry not starting with #)
+`sudo nano /etc/fstab` 
+
+### 3- restore zstd compression
+`sudo rpm-ostree kargs --delete=rootflags=subvol=root --append=rootflags=subvol=root,compress=zstd:1`
+
+
+### 4- fix validity
+`sudo validity-sensors-firmware`
 `sudo systemctl restart python3-validity`
 
-### verify the service has started correctly
+### 5- verify the service has started correctly
 `systemctl status python3-validity`
 
-## restart open-fprintd
+## 6- restart open-fprintd
 `sudo systemctl restart open-fprintd`
 
