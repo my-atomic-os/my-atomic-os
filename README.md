@@ -1,6 +1,6 @@
 [![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/my-atomic-os)](https://artifacthub.io/packages/container/my-atomic-os/my-atomic-os)
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/tammam20/my-atomic-os/build.yml?label=Container%20image%20build%20Status)
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/tammam20/my-atomic-os/shellcheck.yml?label=Shellcheck)
+[![Build my-atomic-os](https://github.com/Tammam20/my-atomic-os/actions/workflows/build.yml/badge.svg)](https://github.com/Tammam20/my-atomic-os/actions/workflows/build.yml)
+[![Shellcheck](https://github.com/Tammam20/my-atomic-os/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/Tammam20/my-atomic-os/actions/workflows/shellcheck.yml)
 
 # my thinkpad-t480 os config
 # features
