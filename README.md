@@ -16,31 +16,30 @@
 ### 3- run the following to switch to my-atomic-os
 
 ### 4- install secret
-`git clone https://github.com/Tammam20/my-atomic-os && sudo sh ./my-atomic-os/install_secret.sh && rm -rf ./my-atomic-os`
+```git clone https://github.com/Tammam20/my-atomic-os && sudo sh ./my-atomic-os/install_secret.sh && rm -rf ./my-atomic-os```
 
 ### 5- switch to my image (signed)
-`sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/tammam20/my-atomic-os:latest`
+```sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/tammam20/my-atomic-os:latest```
 
 ### 6- reboot to image
-`systemctl reboot`
+```systemctl reboot```
 
 ## after install steps (recommended)
 ### 1- fix systemd-remount-fs.service
 
 ### 2- add # to / entry in fstab (the first uncommented entry not starting with #)
-`sudo nano /etc/fstab` 
+```sudo nano /etc/fstab``` 
 
 ### 3- restore zstd compression
-`sudo rpm-ostree kargs --delete=rootflags=subvol=root --append=rootflags=subvol=root,compress=zstd:1`
+```sudo rpm-ostree kargs --delete=rootflags=subvol=root --append=rootflags=subvol=root,compress=zstd:1```
 
 
 ### 4- fix validity
-`sudo validity-sensors-firmware`
-`sudo systemctl restart python3-validity`
+```sudo validity-sensors-firmware```
+```sudo systemctl restart python3-validity```
 
 ### 5- verify the service has started correctly
-`systemctl status python3-validity`
+```systemctl status python3-validity```
 
 ### 6- restart open-fprintd
-`sudo systemctl restart open-fprintd`
-
+```sudo systemctl restart open-fprintd```
