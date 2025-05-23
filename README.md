@@ -41,6 +41,6 @@
 ### 5- verify the service has started correctly
 `systemctl status python3-validity`
 
-## 6- restart open-fprintd
+### 6- restart open-fprintd
 `sudo systemctl restart open-fprintd`
 
