@@ -17,17 +17,19 @@ dnf5 install -y mozilla-openh264 \
 		fprintd-clients-pam \
 		python3-validity \
  		code \
-    		lm_sensors \
-      		stress-ng \
-    		intel-media-driver \
-    		python3-pip \
-    		chromium \
+    	lm_sensors \
+      	stress-ng \
+    	intel-media-driver \
+    	python3-pip \
+    	chromium \
 		distrobox \
   		gh \
 		chezmoi \
    		fastfetch \
  		gnome-themes-extra \
-  		gnome-tweaks
+  		gnome-tweaks \
+		xone \
+		lpf-xone-firmware
        
 dnf5 -y swap ffmpeg-free ffmpeg --allowerasing
 dnf5 -y group install multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
