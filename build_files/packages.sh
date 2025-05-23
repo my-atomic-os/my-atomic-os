@@ -27,9 +27,7 @@ dnf5 install -y mozilla-openh264 \
 		chezmoi \
    		fastfetch \
  		gnome-themes-extra \
-  		gnome-tweaks \
-		xone \
-		lpf-xone-firmware
+  		gnome-tweaks
        
 dnf5 -y swap ffmpeg-free ffmpeg --allowerasing
 dnf5 -y group install multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
