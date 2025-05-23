@@ -16,7 +16,6 @@ mkdir -p /etc/containers/registries.d/
 
 cp /ctx/cosign.pub /etc/pki/containers/cosign.pub
 
-restorecon -RFv /etc/pki/containers
 bash -c 'cat <<EOF > /etc/containers/registries.d/ghcr.tammam20.my-atomic-os.yaml
 docker:
   ghcr.io/tammam20/my-atomic-os:
