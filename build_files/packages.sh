@@ -19,12 +19,13 @@ dnf5 install -y mozilla-openh264 \
       	stress-ng \
     	intel-media-driver \
     	python3-pip \
-		distrobox \
   		gh \
 		chezmoi \
    		fastfetch \
  		gnome-themes-extra \
   		gnome-tweaks
-       
+
+dnf5 remove -y firefox \
+		firefox-langpacks
 dnf5 -y swap ffmpeg-free ffmpeg --allowerasing
 dnf5 -y group install multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
