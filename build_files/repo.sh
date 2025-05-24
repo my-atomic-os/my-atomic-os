@@ -9,16 +9,6 @@ log() {
 }
 
 log "setup repos"
-rpm  --import https://packages.microsoft.com/keys/microsoft.asc
-echo -e "[code]
-name=Visual Studio Code
-baseurl=https://packages.microsoft.com/yumrepos/vscode
-enabled=1
-autorefresh=1
-type=rpm-md
-gpgcheck=1
-gpgkey=https://packages.microsoft.com/keys/microsoft.asc" | \
-tee /etc/yum.repos.d/vscode.repo > /dev/null
 dnf5 -y install dnf5-plugins
 dnf5 -y copr enable lihaohong/chezmoi
 dnf5 -y copr enable sneexy/python-validity

@@ -10,18 +10,15 @@ log() {
 
 log "installing packages"
 
-dnf5 -y group install virtualization 
 dnf5 install -y mozilla-openh264 \
 		open-fprintd \
 		fprintd-clients \
 		fprintd-clients-pam \
 		python3-validity \
- 		code \
     	lm_sensors \
       	stress-ng \
     	intel-media-driver \
     	python3-pip \
-    	chromium \
 		distrobox \
   		gh \
 		chezmoi \
