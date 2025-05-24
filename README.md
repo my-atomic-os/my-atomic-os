@@ -1,6 +1,6 @@
 [![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/my-atomic-os)](https://artifacthub.io/packages/container/my-atomic-os/my-atomic-os)
-[![Build my-atomic-os](https://github.com/Tammam20/my-atomic-os/actions/workflows/build.yml/badge.svg)](https://github.com/Tammam20/my-atomic-os/actions/workflows/build.yml)
-[![Shellcheck](https://github.com/Tammam20/my-atomic-os/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/Tammam20/my-atomic-os/actions/workflows/shellcheck.yml)
+[![Build my-atomic-os](https://github.com/my-atomic-os/my-atomic-os/actions/workflows/build.yml/badge.svg)](https://github.com/my-atomic-os/my-atomic-os/actions/workflows/build.yml)
+[![Shellcheck](https://github.com/my-atomic-os/my-atomic-os/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/my-atomic-os/my-atomic-os/actions/workflows/shellcheck.yml)
 
 # my thinkpad-t480 os config
 # features
@@ -15,14 +15,23 @@
 
 ### 3- run the following to switch to my-atomic-os:
 
-### 3a- install secret
+### 3a- install secret:
+#### 3a1- clone the repo
 ```
-git clone https://github.com/Tammam20/my-atomic-os && sudo sh ./my-atomic-os/install_secret.sh && rm -rf ./my-atomic-os
+git clone https://github.com/my-atomic-os/my-atomic-os
+```
+#### 3a2- run the script
+```
+sudo sh ./my-atomic-os/install_secret.sh
+```
+#### 3a3- delete the repo
+```
+rm -rf ./my-atomic-os
 ```
 
 ### 3b- switch to my image (signed)
 ```
-sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/tammam20/my-atomic-os:latest
+sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/my-atomic-os/my-atomic-os:latest
 ```
 
 ### 3c- reboot to image
