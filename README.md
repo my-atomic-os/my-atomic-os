@@ -6,7 +6,7 @@
 # features
 
 ### 1- python3-validity installed from [copr repo](https://copr.fedorainfracloud.org/coprs/sneexy/python-validity/) by default
-
+### 2- codecs are installed by default
 # install steps
 
 ### 1- download silverblue os first from [torrent](https://torrent.fedoraproject.org/) flash it on a usb drive or use ventoy  
