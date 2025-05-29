@@ -2,7 +2,7 @@
 [![Build my-atomic-os](https://github.com/my-atomic-os/my-atomic-os/actions/workflows/build.yml/badge.svg)](https://github.com/my-atomic-os/my-atomic-os/actions/workflows/build.yml)
 [![Shellcheck](https://github.com/my-atomic-os/my-atomic-os/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/my-atomic-os/my-atomic-os/actions/workflows/shellcheck.yml)
 
-# my thinkpad-t480 os config
+# this is fedora silverblue with my modifications applied
 # features
 
 ### 1- python3-validity installed from [copr repo](https://copr.fedorainfracloud.org/coprs/sneexy/python-validity/) by default
