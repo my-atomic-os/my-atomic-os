@@ -1,7 +1,4 @@
 on:
-  pull_request:
-    branches:
-    - main
   workflow_call:
     inputs:
       stream_name:
@@ -17,9 +14,9 @@ on:
         required: true
         type: choice
         options:
-          - '["42", "latest"]'
-          - '["42"]'
-          - '["latest"]'
+          - '["gts", "stable"]'
+          - '["gts"]'
+          - '["stable"]'
 
 permissions:
   contents: write
@@ -38,6 +35,14 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
           fetch-depth: 500
+
+      - name: Setup Just
+        uses: extractions/setup-just@e33e0265a09d6d736e2ee1e0eb685ef1de4669ff # v3
+
+      - name: Check Just Syntax
+        shell: bash
+        run: |
+          just check
 
       - name: Generate Release Text
         id: generate-release-text
