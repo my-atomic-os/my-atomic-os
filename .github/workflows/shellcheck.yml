@@ -17,6 +17,6 @@ jobs:
         uses: ludeeus/action-shellcheck@master
         with:
         ignore_paths: >-
-          **/README.md
+          README.md
 
 ---
