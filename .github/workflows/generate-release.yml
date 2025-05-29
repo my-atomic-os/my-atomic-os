@@ -14,9 +14,9 @@ on:
         required: true
         type: choice
         options:
-          - '["gts", "stable"]'
-          - '["gts"]'
-          - '["stable"]'
+          - '["42", "latest"]'
+          - '["42"]'
+          - '["latest"]'
 
 permissions:
   contents: write
