@@ -23,7 +23,8 @@ dnf5 install -y mozilla-openh264 \
 		chezmoi \
    		fastfetch \
  		gnome-themes-extra \
-  		gnome-tweaks
+  		gnome-tweaks \
+    		steam
 
 dnf5 remove -y  firefox \
 		firefox-langpacks \
