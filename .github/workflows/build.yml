@@ -27,7 +27,7 @@ concurrency:
 
 jobs:
   shellcheck:
-    uses: ./my-atomic-os/my-atomic-os/edit/main/.github/workflows/shellcheck.yml
+    uses: ./.github/workflows/shellcheck.yml
   build_push:
     name: Build and push image
     runs-on: ubuntu-24.04
