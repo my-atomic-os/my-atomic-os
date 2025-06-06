@@ -26,9 +26,12 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  shellcheck:
+    uses: my-atomic-os/my-atomic-os/edit/main/.github/workflows/shellcheck.yml@main
   build_push:
     name: Build and push image
     runs-on: ubuntu-24.04
+    needs: shellcheck
 
     permissions:
       contents: read
