@@ -11,9 +11,7 @@ on:
     - main
     paths-ignore:
     - '**/README.md'
-    - '**/shellcheck.yml'
     - '**/dependabot.yml'
-    - '**/release-please.yml'
   workflow_dispatch:
 
 
