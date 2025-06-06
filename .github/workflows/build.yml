@@ -28,10 +28,12 @@ concurrency:
 jobs:
   shellcheck:
     uses: ./.github/workflows/shellcheck.yml
+  jekyll-gh-pages:
+    uses: ./.github/workflows/jekyll-gh-pages.yml
   build_push:
     name: Build and push image
     runs-on: ubuntu-24.04
-    needs: shellcheck
+    needs: [shellcheck, jekyll-gh-pages]
 
     permissions:
       contents: read
